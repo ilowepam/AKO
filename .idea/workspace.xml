@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5046ce1-9e0f-4ee0-aeb7-68e4e88138b1" name="Changes" comment="">
+    <list default="true" id="e5046ce1-9e0f-4ee0-aeb7-68e4e88138b1" name="Changes" comment="FEATURE: initial version.">
+      <change beforePath="$PROJECT_DIR$/.idea/AKO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AKO.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/AdA.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/AdA.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/Company.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/Company.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/Platoon.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/Platoon.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/Ranks.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/Rank.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,17 +22,22 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
+  <component name="GOROOT" url="file://C:/Program Files/Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2V9dBla8qJ8iQQ81OPZQ5sRhiXG" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -32,14 +46,34 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
     "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
     "WebServerToolWindowFactoryState": "false",
+    "configurable..is.expanded": "false",
+    "configurable.GoLibrariesConfigurable.is.expanded": "true",
     "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
     "last_opened_file_path": "D:/05_School/02_TEKO/01_Wirtschaftsinformatik/18_OOP/Projektarbeit/AKO",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "go.vgo",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\05_School\02_TEKO\01_Wirtschaftsinformatik\18_OOP\Projektarbeit\AKO\backend" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,11 +82,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1694252096662</updated>
-      <workItem from="1694252097670" duration="73000" />
+      <workItem from="1694252097670" duration="877000" />
     </task>
+    <task id="LOCAL-00001" summary="FEATURE: initial version.">
+      <created>1694252192346</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694252192346</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FEATURE: initial version." />
+    <option name="LAST_COMMIT_MESSAGE" value="FEATURE: initial version." />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>

@@ -1,9 +1,14 @@
 package model
 
 type Platoon struct {
-	Name      string
-	Strength  int
-	Location  string
-	Commander Soldier
-	Soldiers  []Soldier
+	id        int
+	name      string
+	strength  int
+	location  string
+	commander AdA
+	soldiers  []AdA
+}
+
+func CreatePlatoon(pName string, pTime int, pDesc string) TrainingLesson {
+	return TrainingLesson{name: pName, time: pTime, desc: pDesc}
 }

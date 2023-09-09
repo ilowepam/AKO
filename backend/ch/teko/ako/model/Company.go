@@ -1,8 +1,8 @@
 package model
 
 type Company struct {
-	Id           int
-	Headquarters string
-	Commander    Soldier
-	Platoons     []Platoon
+	id           int
+	headquarters string
+	commander    AdA
+	platoons     []Platoon
 }

@@ -1,6 +1,6 @@
 package model
 
-type Ranks string
+type Rank string
 
 const (
 	General               = "General"

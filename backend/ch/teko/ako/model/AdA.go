@@ -1,7 +1,8 @@
 package model
 
 type AdA struct {
-	Name string
-	Rank Ranks
-	Age  int
+	id   int
+	name string
+	rank Rank
+	age  int
 }
