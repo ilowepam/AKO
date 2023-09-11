@@ -7,7 +7,7 @@ const (
 	CorpsCommander        = "Korpskommandant"
 	DivisionOfficer       = "Divisionär"
 	Brigadier             = "Brigadier"
-	Fachoffizier          = "Specialist officer"
+	SpecialistOfficer     = "Fachoffizier"
 	Colonel               = "Oberst"
 	LieutenantColonel     = "Oberstleutnant"
 	Major                 = "Major"

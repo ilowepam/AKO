@@ -19,17 +19,18 @@ func MakeApi() *Handler {
 	}
 
 	configureCors(h.engine)
-	/*
-		router := h.engine.Group("/api/reminder/")
-		router.GET("/:id", h.GetReminder)
-		router.DELETE("/:id", h.DeleteReminder)
-		router.GET("/all", h.GetReminders)
-		router.POST("/", h.CreateReminder)
-		router.PUT("/", h.UpdateReminder)
-	*/
+
+	router := h.engine.Group("/api/ako/")
+
+	trainingLessonGroup := router.Group("/traininglesson")
+	trainingLessonGroup.GET("/all", h.getLessons)
+	trainingLessonGroup.GET("/:id", h.getLessonByID)
+	trainingLessonGroup.POST("/", h.createLesson)
+	trainingLessonGroup.PUT("/:id", h.updateLesson)
+	trainingLessonGroup.DELETE("/:id", h.deleteLesson)
+
 	return h
 }
-
 func (h Handler) Run() {
 	err := h.engine.Run()
 	if err != nil {

@@ -1,6 +1,7 @@
 package repository
 
 import (
+	"AKO/ch/teko/ako/model"
 	"database/sql"
 	"fmt"
 	"log"
@@ -30,4 +31,14 @@ func NewPostgresStorageImpl() *PostgresqlStorageImpl {
 	}
 
 	return &PostgresqlStorageImpl{db: db}
+}
+
+func (storage *PostgresqlStorageImpl) GetLessonById(id int) (*model.Lesson, error) {
+	var lesson model.Lesson
+	row := storage.db.QueryRow("SELECT id, task, done FROM tbl_lesson WHERE id = $1", id)
+	err := row.Scan(&lesson.Id, &lesson.Time, &lesson.Desc)
+	if err != nil {
+		return nil, err
+	}
+	return &lesson, nil
 }

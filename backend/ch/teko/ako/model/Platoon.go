@@ -8,7 +8,3 @@ type Platoon struct {
 	commander AdA
 	soldiers  []AdA
 }
-
-func CreatePlatoon(pName string, pTime int, pDesc string) TrainingLesson {
-	return TrainingLesson{name: pName, time: pTime, desc: pDesc}
-}
