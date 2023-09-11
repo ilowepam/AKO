@@ -1,2 +1,2 @@
 # AKO
-Ausbildungskontrolle_BAT
+Ausbildungskontrolle
