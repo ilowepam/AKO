@@ -6,15 +6,11 @@ import (
 	"strconv"
 )
 
-type lessonResponse struct {
+type lessonJson struct {
 	Id   int    `json:"id"`
 	Name string `json:"name"`
 	Time int    `json:"time"`
 	Desc string `json:"desc"`
-}
-
-func (h Handler) getLessons(context *gin.Context) {
-
 }
 
 func (h Handler) getLessonByID(context *gin.Context) {
@@ -28,7 +24,7 @@ func (h Handler) getLessonByID(context *gin.Context) {
 	if err != nil {
 		_ = context.AbortWithError(http.StatusBadRequest, err)
 	}
-	context.JSON(http.StatusOK, lessonResponse{Id: lesson.Id, Name: lesson.Name, Time: lesson.Time, Desc: lesson.Desc})
+	context.JSON(http.StatusOK, lessonJson{Id: lesson.Id, Name: lesson.Name, Time: lesson.Duration, Desc: lesson.Desc})
 }
 
 func (h Handler) createLesson(context *gin.Context) {

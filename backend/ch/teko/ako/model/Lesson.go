@@ -1,12 +1,12 @@
 package model
 
 type Lesson struct {
-	Id   int
-	Name string
-	Time int
-	Desc string
+	Id       int
+	Name     string
+	Duration int
+	Desc     string
 }
 
-func New(pName string, pTime int, pDesc string) Lesson {
-	return Lesson{Name: pName, Time: pTime, Desc: pDesc}
+func NewLessonObj(pName string, pDuration int, pDesc string) Lesson {
+	return Lesson{Name: pName, Duration: pDuration, Desc: pDesc}
 }

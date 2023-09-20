@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e5046ce1-9e0f-4ee0-aeb7-68e4e88138b1" name="Changes" comment="ongoing development.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/controller/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/controller/Handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/AdaTrainingLesson.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/AdaLesson.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/Platoon.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/Platoon.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/Rank.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/Rank.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/TrainingLesson.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/Lesson.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/controller/Handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/controller/Handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/controller/LessonDAO.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/controller/LessonDAO.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/AdA.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/AdA.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/Company.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/Company.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/Lesson.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/Lesson.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/repository/PostGresConnection.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/repository/PostGresConnection.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,6 +88,8 @@
       <updated>1694252096662</updated>
       <workItem from="1694252097670" duration="4420000" />
       <workItem from="1694455646445" duration="284000" />
+      <workItem from="1694455940057" duration="594000" />
+      <workItem from="1695048138553" duration="595000" />
     </task>
     <task id="LOCAL-00001" summary="FEATURE: initial version.">
       <created>1694252192346</created>

@@ -23,11 +23,17 @@ func MakeApi() *Handler {
 	router := h.engine.Group("/api/ako/")
 
 	trainingLessonGroup := router.Group("/traininglesson")
-	trainingLessonGroup.GET("/all", h.getLessons)
 	trainingLessonGroup.GET("/:id", h.getLessonByID)
 	trainingLessonGroup.POST("/", h.createLesson)
-	trainingLessonGroup.PUT("/:id", h.updateLesson)
 	trainingLessonGroup.DELETE("/:id", h.deleteLesson)
+
+	adaGroup := router.Group("/ada")
+	adaGroup.POST("/", h.createAdA)
+	adaGroup.GET("/:companyId", h.getAllAdAByCompanyId)
+	adaGroup.DELETE("/:id", h.deleteAdA)
+
+	companyGroup := router.Group("/company")
+	companyGroup.POST("/", h.createCompany)
 
 	return h
 }
