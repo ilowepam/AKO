@@ -4,12 +4,31 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5046ce1-9e0f-4ee0-aeb7-68e4e88138b1" name="Changes" comment="FEATURE: adding ADAs&#10;ONGOING DEVELOPMENT: working on company-backend.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+    <list default="true" id="e5046ce1-9e0f-4ee0-aeb7-68e4e88138b1" name="Changes" comment="ONGOING DEVELOPMENT: setting up frontend with template App.vue / main.js">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/ch/teko/ako/controller/RankDAO.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/resource/db/tbl_company.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/ch/teko/ako/AddAdA.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/ch/teko/ako/Overview.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/vite.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/controller/AdADAO.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/controller/AdADAO.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/controller/CompanyDAO.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/controller/CompanyDAO.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/controller/Handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/controller/Handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/controller/LessonDAO.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/controller/LessonDAO.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/AdA.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/AdA.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/Company.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/Company.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/Lesson.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/Lesson.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/Platoon.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/model/Rank.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/model/Rank.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ch/teko/ako/repository/PostGresConnection.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/ch/teko/ako/repository/PostGresConnection.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/resource/db/tbl_Ada.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/resource/db/tbl_ada.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/ch/teko/ako/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ch/teko/ako/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/ch/teko/ako/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ch/teko/ako/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/main.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +41,7 @@
         <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="package.json" />
+        <option value="Vue Composition API Component" />
         <option value="Go File" />
       </list>
     </option>
@@ -44,33 +64,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "configurable..is.expanded": "false",
-    "configurable.GoLibrariesConfigurable.is.expanded": "true",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "D:/05_School/02_TEKO/01_Wirtschaftsinformatik/18_OOP/Projektarbeit/AKO/frontend/ch/teko/ako",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Users/Noelz/AppData/Roaming/JetBrains/WebStorm2023.1/node/node-v18.15.0-win-x64/node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;configurable..is.expanded&quot;: &quot;false&quot;,
+    &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/05_School/02_TEKO/01_Wirtschaftsinformatik/18_OOP/Projektarbeit/AKO/frontend/ch/teko/ako&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/Noelz/AppData/Roaming/JetBrains/WebStorm2023.1/node/node-v18.15.0-win-x64/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.1.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\05_School\02_TEKO\01_Wirtschaftsinformatik\18_OOP\Projektarbeit\AKO\frontend\ch\teko\ako" />
@@ -80,14 +107,30 @@
       <recent name="D:\05_School\02_TEKO\01_Wirtschaftsinformatik\18_OOP\Projektarbeit\AKO\backend" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="AKO-Frontend" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="containerName" value="frontend" />
-          <option name="sourceFilePath" value="frontend/Dockerfile" />
-        </settings>
-      </deployment>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="go build AKO/" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="AKO" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="AKO" />
+      <working_directory value="$PROJECT_DIR$/backend" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/backend/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
   </component>
@@ -105,7 +148,8 @@
       <workItem from="1695048138553" duration="595000" />
       <workItem from="1695315449610" duration="596000" />
       <workItem from="1695388591579" duration="1834000" />
-      <workItem from="1695390468344" duration="1256000" />
+      <workItem from="1695390468344" duration="2296000" />
+      <workItem from="1695467713751" duration="1442000" />
     </task>
     <task id="LOCAL-00001" summary="FEATURE: initial version.">
       <created>1694252192346</created>
@@ -121,7 +165,21 @@
       <option name="project" value="LOCAL" />
       <updated>1694259878560</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ONGOING DEVELOPMENT: setting up frontend with template App.vue / main.js">
+      <created>1695391992458</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695391992458</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ONGOING DEVELOPMENT: setting up frontend with template App.vue / main.js">
+      <created>1695392008323</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695392008323</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +201,8 @@
     <MESSAGE value="FEATURE: initializing db-connection." />
     <MESSAGE value="ongoing development." />
     <MESSAGE value="FEATURE: adding ADAs&#10;ONGOING DEVELOPMENT: working on company-backend." />
-    <option name="LAST_COMMIT_MESSAGE" value="FEATURE: adding ADAs&#10;ONGOING DEVELOPMENT: working on company-backend." />
+    <MESSAGE value="ONGOING DEVELOPMENT: setting up frontend with template App.vue / main.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="ONGOING DEVELOPMENT: setting up frontend with template App.vue / main.js" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

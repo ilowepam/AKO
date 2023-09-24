@@ -1,33 +1,24 @@
 package controller
 
 import (
-	"AKO/ch/teko/ako/model"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
 type newCompanyJson struct {
-	Name      string    `json:"name"`
-	Commander model.AdA `json:"commander"`
+	Name string `json:"name"`
 }
 
 type companyJson struct {
-	Id        int       `json:"id"`
-	Name      string    `json:"name"`
-	Commander model.AdA `json:"commander"`
+	Id   int    `json:"id"`
+	Name string `json:"name"`
 }
 
-func (h Handler) createCompany(context *gin.Context) {
-	company := newCompanyJson{}
-	err := context.BindJSON(&company)
-	if err != nil {
-		_ = context.AbortWithError(http.StatusBadRequest, err)
-		return
+func (h Handler) getAllCompanies(context *gin.Context) {
+	companies := h.repository.GetAllCompanies()
+	allCompanies := make([]companyJson, len(companies))
+	for index, company := range companies {
+		allCompanies[index] = companyJson{Id: company.Id, Name: company.Name}
 	}
-	id, err := h.repository.CreateCompany(company.Name, company.Commander)
-	if err != nil {
-		context.AbortWithError(http.StatusBadRequest, err)
-		return
-	}
-	context.JSON(http.StatusOK, companyJson{id, company.Name, company.Commander})
+	context.JSON(http.StatusOK, allCompanies)
 }

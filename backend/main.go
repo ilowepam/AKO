@@ -1,6 +1,8 @@
-package backend
+package main
 
-import "AKO/ch/teko/ako/controller"
+import (
+	"AKO/ch/teko/ako/controller"
+)
 
 func main() {
 	handler := controller.MakeApi()

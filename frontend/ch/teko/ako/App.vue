@@ -1,31 +1,19 @@
 <template>
   <div>
-    <h1>{{ message }}</h1>
-    <button @click="increment">Increment</button>
-    <button @click="decrement">Decrement</button>
-    <p>Counter: {{ counter }}</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <router-link to="/" class="navbar-brand">Übersicht</router-link>
+      <router-link to="/add-ada" class="navbar-brand">AdA hinzufügen</router-link>
+    </nav>
+
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      message: 'Simple Counter App',
-      counter: 0
-    };
-  },
-  methods: {
-    increment() {
-      this.counter++;
-    },
-    decrement() {
-      this.counter--;
-    }
-  }
 };
 </script>
 
-<style scoped>
-/* Add your component-specific styles here */
+<style>
+/* Add any custom styles if needed */
 </style>

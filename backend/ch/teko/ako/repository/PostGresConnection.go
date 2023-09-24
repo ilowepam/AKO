@@ -4,6 +4,7 @@ import (
 	"AKO/ch/teko/ako/model"
 	"database/sql"
 	"fmt"
+	_ "github.com/lib/pq"
 	"log"
 )
 
@@ -33,60 +34,21 @@ func NewPostgresStorageImpl() *PostgresqlStorageImpl {
 	return &PostgresqlStorageImpl{db: db}
 }
 
-func (storage *PostgresqlStorageImpl) CreateAdA(pName string, pRank model.Rank) (int, error) {
-	result, err := storage.db.Exec("INSERT INTO tbl_AdA (name, rank, age) VALUES ($1, $2)", pName, pRank)
+func (storage *PostgresqlStorageImpl) GetAllCompanies() []model.Company {
+	var companies = make([]model.Company, 0)
+	rows, err := storage.db.Query("SELECT id, name FROM tbl_company")
 	if err != nil {
-		return -1, err
-	}
-	id, err := result.LastInsertId()
-	if err != nil {
-		return -1, err
-	}
-	return int(id), nil
-}
-
-func (storage *PostgresqlStorageImpl) GetAllAdAByCompanyId(pCompanyId int) []model.AdA {
-	var adas = make([]model.AdA, 0)
-	rows, err := storage.db.Query("SELECT id, name, rank FROM tbl_Ada a WHERE  ")
-	if err != nil {
-		return adas
+		return companies
 	}
 
 	for rows.Next() {
-		var ada model.AdA
-		err = rows.Scan(&ada.Id, &ada.Name, &ada.Rank)
+		var company model.Company
+		err = rows.Scan(&company.Id, &company.Name)
 		if err != nil {
 			log.Println("Could not read values from row")
-			return adas
+			return companies
 		}
-		adas = append(adas, ada)
+		companies = append(companies, company)
 	}
-
-	return adas
-}
-
-func (storage *PostgresqlStorageImpl) DeleteAdA(id int) bool {
-	_, err := storage.db.Exec("DELETE FROM tbl_AdA WHERE id = $1", id)
-	return err == nil
-}
-func (storage *PostgresqlStorageImpl) CreateCompany(pName string, pCommander model.AdA) (int, error) {
-	result, err := storage.db.Exec("INSERT INTO tbl_AdA (name, rank) VALUES ($1, $2)", pName, pCommander)
-	if err != nil {
-		return -1, err
-	}
-	id, err := result.LastInsertId()
-	if err != nil {
-		return -1, err
-	}
-	return int(id), nil
-}
-
-func (storage *PostgresqlStorageImpl) GetLessonById(pId int) (*model.Lesson, error) {
-	var lesson model.Lesson
-	row := storage.db.QueryRow("SELECT id, task, done FROM tbl_lesson WHERE id = $1", pId)
-	err := row.Scan(&lesson.Id, &lesson.Duration, &lesson.Desc)
-	if err != nil {
-		return nil, err
-	}
-	return &lesson, nil
+	return companies
 }
