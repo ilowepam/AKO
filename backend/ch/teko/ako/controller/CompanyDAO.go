@@ -14,7 +14,7 @@ type companyJson struct {
 	Name string `json:"name"`
 }
 
-func (h Handler) getAllCompanies(context *gin.Context) {
+func (h Handler) GetAllCompanies(context *gin.Context) {
 	companies := h.repository.GetAllCompanies()
 	allCompanies := make([]companyJson, len(companies))
 	for index, company := range companies {

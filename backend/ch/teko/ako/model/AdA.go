@@ -6,3 +6,7 @@ type AdA struct {
 	Rank      string
 	CompanyId int
 }
+
+func GetAdAHeaderNames() []string {
+	return []string{"Id", "Name", "Rank", "Company"}
+}
