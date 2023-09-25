@@ -22,7 +22,11 @@ func MakeApi() *Handler {
 
 	router := h.engine.Group("/api/ako/")
 
+	adaGroup := router.Group("/ada")
+	adaGroup.POST("/", h.CreateAda)
+
 	companyGroup := router.Group("/company")
+	companyGroup.POST("/", h.CreateCompany)
 	companyGroup.GET("/all", h.getAllCompanies)
 
 	rankGroup := router.Group("/rank")

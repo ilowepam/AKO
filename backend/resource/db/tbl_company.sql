@@ -1,14 +1,12 @@
-DROP TABLE IF EXISTS tbl_Company;
+DROP TABLE IF EXISTS tbl_company;
 
-CREATE TABLE tbl_Company (
-                             id INT AUTO_INCREMENT PRIMARY KEY,
-                             name VARCHAR(255) NOT NULL,
-                             UNIQUE (id)
+CREATE TABLE tbl_company (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255)
 );
 
-
-INSERT INTO tbl_Company (name) VALUES ('Company A');
-INSERT INTO tbl_Company (name) VALUES ('Company B');
-INSERT INTO tbl_Company (name) VALUES ('Company C');
-INSERT INTO tbl_Company (name) VALUES ('Company D');
-INSERT INTO tbl_Company (name) VALUES ('Company E');
+INSERT INTO tbl_company (name) VALUES ('Company A');
+INSERT INTO tbl_company (name) VALUES ('Company B');
+INSERT INTO tbl_company (name) VALUES ('Company C');
+INSERT INTO tbl_company (name) VALUES ('Company D');
+INSERT INTO tbl_company (name) VALUES ('Company E');

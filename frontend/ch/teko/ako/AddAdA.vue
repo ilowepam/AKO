@@ -15,7 +15,9 @@
       </div>
       <div class="mb-3">
         <label for="company" class="form-label">Kompaniename:</label>
-        <input type="text" class="form-control" v-model="newAdA.company" required>
+        <select v-model="newAdA.company" class="form-select" required>
+          <option v-for="company in companyOpts" :key="company.name" :value="company.name">{{company.name}}</option>
+        </select>
       </div>
       <button type="submit" class="btn btn-primary">Hinzufügen</button>
     </form>
@@ -29,27 +31,53 @@ export default {
   data() {
     return {
       newAdA: { name: '', rank: '', company: '' },
-      rankOptions: [] // Array to store rank options fetched from the API
+      rankOptions: [],
+      companyOpts: []
     };
   },
   created() {
-    this.fetchRankOptions(); // Fetch rank options when the component is created
+    this.fetchRankOptions();
+    this.fetchCompanyOpts();
   },
   methods: {
     async fetchRankOptions() {
       try {
         const response = await axios.get('http://localhost:8080/api/ako/rank/all');
         this.rankOptions = response.data;
-        this.newAdA.rank = this.rankOptions[0] ? this.rankOptions[0].rank : ''; // Set default rank
+        this.newAdA.rank = this.rankOptions[0] ? this.rankOptions[0].rank : '';
       } catch (error) {
         console.error('Error fetching rank options:', error);
       }
     },
-    addAdA() {
-      // Add logic to handle adding AdA
-      console.log('AdA added:', this.newAdA);
-      // Reset the form
-      this.newAdA = { name: '', rank: this.rankOptions[0] ? this.rankOptions[0].rank : '', company: '' };
+    async fetchCompanyOpts() {
+      try {
+        const response = await axios.get('http://localhost:8080/api/ako/company/all');
+        this.companyOpts = response.data;
+        this.newAdA.company = this.companyOpts[0] ? this.companyOpts[0].name : '';
+      } catch (error) {
+        console.error('Error fetching rank options:', error);
+      }
+    },
+    async addAdA() {
+      try {
+        const payload = {
+          Name: this.newAdA.name,
+          Rank: this.newAdA.rank,
+          CompanyName: this.newAdA.company
+        };
+
+        const response = await axios.post('http://localhost:8080/api/ako/ada/', payload);
+
+        console.log('AdA added successfully:', response.data);
+
+        this.newAdA = {
+          name: '',
+          rank: this.rankOptions[0] ? this.rankOptions[0].rank : '',
+          company: this.companyOpts[0] ? this.companyOpts[0].name : ''
+        };
+      } catch (error) {
+        console.error('Error adding AdA:', error);
+      }
     }
   }
 };
@@ -61,11 +89,11 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Adjust as needed to center vertically */
+  height: 100vh;
 }
 
 .center-form {
-  width: 300px; /* Adjust the width of the form as needed */
+  width: 300px;
   margin: auto;
 }
 </style>

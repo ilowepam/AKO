@@ -22,3 +22,18 @@ func (h Handler) getAllCompanies(context *gin.Context) {
 	}
 	context.JSON(http.StatusOK, allCompanies)
 }
+
+func (h Handler) CreateCompany(context *gin.Context) {
+	company := newCompanyJson{}
+	err := context.BindJSON(&company)
+	if err != nil {
+		_ = context.AbortWithError(http.StatusBadRequest, err)
+		return
+	}
+	id, err := h.repository.CreateCompany(company.Name)
+	if err != nil {
+		context.AbortWithError(http.StatusBadRequest, err)
+		return
+	}
+	context.JSON(http.StatusOK, companyJson{id, company.Name})
+}
